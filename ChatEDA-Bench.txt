@@ -1,0 +1,185 @@
+<Requirement>:
+For the "aes" circuit, I want to run the steps from setup to detailed routing on the platform "asap7"?  
+<Requirement>:
+Synthesize the "cryptography" design using the "sky130" platform. Optimize for area rather than speed when you run synthesis.
+<Requirement>:
+Perform routing for the "processor" design on the "asap7" platform.
+<Requirement>:
+Can you help me to synthesize the "video_decoder" design, targeting the "gf180" platform. Use a clock period of 8.5 during the EDA flow.
+<Requirement>:
+I want to perform placement with 0.5 density and generate the final report for my "adder" design on the asap7 platform.
+<Requirement>:
+How can I know that how channel values impact the performance after the clock tree synthesis stage? 
+<Requirement>:
+I want to perform cts for the "multiplier" design using the "sky130" technology node, can you help me to write the script?
+<Requirement>:
+Please show me how to complete the design flow in script. 
+<Requirement>:
+Please write a function that takes 'clock period' as the single parameter. The function can finish the flow with the given parameter.
+<Requirement>:
+Now I have a design called 'Rocket'. I would like to quickly investigate the pre-routing performance and area metrics on ASAP7. Could you help to do?
+<Requirement>:
+Write a script that performs placement and routing for my design "router" on the platform nangate45.
+<Requirement>:
+Do global routing and detail routing for ibex design on ASAP7.
+<Requirement>:
+Please show me how to complete the design flow for the "aes" circuit on the platform "asap7". 
+<Requirement>:
+I want to carry out clock tree synthesis for the design "modulator.v" using the process design kit "gf180" with a desired density of 0.95. Can you help me to generate the script?
+<Requirement>:
+I want to get the final report for the "jpeg_encoder" design on the "sky130" platform with a clock period of 5ns. Can you guide me how to do?
+<Requirement>:
+Can you perform placement for the "processor_design" design with various densities on the platform "sky130"?
+<Requirement>:
+Please help me to generate the script to execute the entire flow for the design "leon" using the process design kit "gf180". During the entire flow, perform floorplanning with halo values of {5, 10, 15} and channel widths of {5, 10, 15, 20}. 
+<Requirement>:
+Can you help me to experiment with different combinations of clock periods and channel values for the "router" design on the platform "asap7"?
+<Requirement>:
+I have a design called "data_processor" on the platform "asap7". I want to experiment with different combinations of clock periods, density values, halo sizes, and channel widths during the whole EDA flow.
+<Requirement>:
+I want to conduct a comprehensive exploration of the design space including varying floorplan parameters and different placement densities for my design called "how" on the platform "nangate45". Can you do that?
+<Requirement>:
+Can you help me to find the smallest chip area of my design "sdsk" on the gf180 platform by performing grid search. When you perform grid search, you can search different floorplan parameters and placement parameters.
+<Requirement>:
+I have a design "shjfk" and we need a script to automate the flow on platform gf180 that finishes placement and everything before that. Given that, we would like to know how fixing violating paths in clock tree synthesis would affect the wns and tns metrics.
+<Requirement>:
+I want to perform a grid search on the design "how" on "gf180" platform for floorplan parameters, CTS parameters and placement parameters to find the best balance of chip area, power comsumption and performance. Can you help me to do that?
+<Requirement>:
+Try to find out the smallest valid clock period for the design "leon" on "asap7" platform. Note that a clock period is valid only if the "wns" metric at the final stage is non negative.
+<Requirement>:
+Try to find the best combination of my design "dfhdjgk" on ASAP7 which can get the best balance of performance, power comsumption and chip area after routing. Here is the combination:
+[{"clock_period": 1, "density": 0.5, "core_utilization": 70, "core_aspect_ratio": 1, "macro_place_halo": 5, "core_margins": 10, "macro_place_channel": 10},
+{"density": 0.4, "clock_period":1, "core_utilization": 80, "macro_place_channel": 15, "core_aspect_ratio": 1, "core_margins": 15, "macro_place_halo": 19},
+{"density": 0.3, "clock_period":2, "core_utilization": 60, "macro_place_channel": 10, "core_aspect_ratio": 1.2, "core_margins": 12, "macro_place_halo": 13},
+{"core_utilization": 56, "macro_place_channel": 9, "core_aspect_ratio": 1.4, "density": 0.2, "clock_period":4, "core_margins": 20, "macro_place_halo": 9},
+{"clock_period":3, "core_utilization": 72, "macro_place_channel": 11, "core_aspect_ratio": 2.1, "core_margins": 1,"density": 0.1,  "macro_place_halo": 1}]
+<Requirement>:
+Can you help me check whether the provided script can complete the task and provide the reason. 
+Here is the task:
+I want to optimize performance at the final stage for my design asjdk on nangate45. 
+Here is the script:
+def tune_performance():
+    params = {
+        "tns_end_percent": {"minmax": [0, 100], "step": 5} 
+    }
+    def optimize(tns_end_percent):
+        eda = chateda()
+        eda.setup(design_name="asjdk", platform="nangate45")
+        eda.run_synthesis()
+        eda.floorplan()
+        eda.placement()
+        eda.cts(tns_end_percent=tns_end_percent)
+        return eda.get_metric(stage="cts", metrics=["performance"])
+    best_params = tune(optimize, params)
+    print(best_params)
+tune_performance()
+If the script can't complete the task, please provide a script that can complete the task.
+<Requirement>:
+Can you help me check whether the provided script can complete the task and provide the reason. 
+Here is the task:
+I want to perform cts for my design asjdk on nangate45.
+Here is the script:
+def perform_cts(tns_end_percent):
+    eda = chateda()
+    eda.setup(design_name="asjdk", platform="nangate45")
+    eda.run_synthesis()
+    eda.floorplan()
+    eda.placement(tns_end_percent=tns_end_percent)
+    eda.cts()
+perform_cts(10)
+If the script can't complete the task, please provide a script that can complete the task.
+<Requirement>:
+Can you help me check whether the provided script can complete the task and provide the reason. 
+Here is the task:
+I want to optimize performance at the routing stage for my design asjdk on nangate45. 
+Here is the script:
+def tune_performance():
+    params = {
+        "tns_end_percent": {"minmax": [0, 100], "step": 5} 
+    }
+    def optimize(tns_end_percent):
+        eda = chateda()
+        eda.setup(design_name="asjdk", platform="nangate45")
+        eda.run_synthesis()
+        eda.cts(tns_end_percent=tns_end_percent)
+        eda.global_route()
+        eda.detail_route()
+        return eda.get_metric(stage="route", metrics=["performance"])
+    best_params = tune(optimize, params)
+    print(best_params)
+tune_performance()
+If the script can't complete the task, please provide a script that can complete the task.
+<Requirement>:
+I want to do clock tree synthesis on the "aes" design for the "asap7" platform. Please try different end slack values between 10% and 30% to see the impact on wns and tns at the final stage.
+<Requirement>:
+I want to perform grid search for the design "aaksdjka" using the technology node "asap7", and evaluate the ppa results at the final stage. The search space of parameters are as follows:
+{
+    "core utilization": [10, 20, 30, 40]
+    "clock_period": [4, 5]
+    "density": [0.1, 0.2, 0.3, 0.4, 0.5]
+    "core aspect ratio": [1.0 1.5 2.0 2.5]
+}
+<Requirement>:
+Can you show me how to perform dse for "touter" design on the platform gf180? Try to search in a large space of all the tunable parameters to get the smallest chip area with a appropriate power comsumption.
+<Requirement>:
+What are the tunable parameters in floorplan? Give me an example of tuning them for "router" design on the platform sky130 to get the ppa results.
+<Requirement>:
+For the design "aes" on "nangate45" platform, please write me a script to optimize performance, power and area metrics using the parameter tuning method while setting clock period to 5.
+<Requirement>:
+We are going to develop the new ASIC project "datacenter_chip" for server applications on the "nangate4" platform, I want to create an automated script that will tune the EDA process, while optimizing for minimal power usage and maintaining acceptable performance and area. Here is my plan:
+(1) Density level are ranging from 0.1 to 0.9 with increments of 0.005;
+(2) The search space of core utilization percentages is between 60% and 85%;
+(3) Clock periods are ranging from 5 to 10 in steps of 1;
+(4) Resolve 50% to 80% of timing violations, increasing in steps of 3%;
+(5) Setting the core aspect ratio play around between 1 and 2 with a step of 0.2;
+(6) Setting the core margins, macro place halo, and macro place channel to be 7, 8, 9 separately;
+(7) Keeping the rest of the parameters at their default values.
+<Requirement>:
+The project's name is "hello", and we are using the "asap7" platform. We want to perform an optimization of ppa at the final stage. Try to find the best combinations of floorplan parameters using "tune()" method.
+<Requirement>:
+The project's name is "hello", and we are using the "asap7" platform. We want to evaluate the ppa after performing the entire flow. Try to find the best combinations of all tunable parameters using "tune()".
+<Requirement>:
+I have a design asadsf on nangate45. I want to perform dse to get the best performance.
+<Requirement>:
+I want to perform dse for my design "asadsf" on nangate45 with default placement and synthesis parameters. Using performance and area as evaluation metrics for parameter tuning.
+<Requirement>: 
+I am working on the project "nano_robot", and I chose the "nangate45" platform. The optimization plan of performance, power and area metrics at the routing stage is defined as follows:
+1) Run the synthesis with a static clock period of 3.
+2) During CTS, we want to fix between 10% to 90% of violating paths with steps of 20%. 
+3) While performing placement, the density should be adjusted from 0.5 to 0.85 with an increment of 0.05.
+4) The floorplanning should fix the core utilization at 55% and vary the core aspect ratio from 0.8 to 1.2 with a step of 0.2 and the core margins from 3 to 9 with an increment of 2. The macro place halo and macro place channel values should be fixed at 8.
+<Requirement>:  
+I want to perform DSE for the design "aaksdjka" using the technology node "asap7", and consider tns, wns, the required chip surface area, and the power consumption at the final stage as the evaluation metric of DSE. The search space of parameters are as follows:
+1. Core utilization ranging from 60% to 80% with a step of 5%.
+2. Core aspect ratio from 1 to 3 continously.
+3. Core margins from 2 to 10 with a step of 1.
+4. Macro place halo from 5 to 15 with a step of 1.
+5. Macro place channel from 5 to 15 with a step of 1.
+6. Clock period of 5.
+7. Density form 0.3 to 0.9 with a step of 0.
+8. Conduct clock tree synthesis with 50% tns_end_percent.
+<Requirement>:  
+I want to perform DSE for the design "aaksdjka" using the technology node "asap7", and consider tns, wns, the required chip surface area, and the power consumption at the final stage as the evaluation metric of DSE. The search space of parameters are as follows:
+{
+    "core utilization": "60->80 with a step of 5"
+    "clock period": "1->5 with a step of 1"
+    "core aspect ratio": "1.5" 
+}
+<Requirement>:  
+I want to perform DSE for the design "aaksdjka" using the technology node "asap7", and consider tns, wns, the required chip surface area, and the power consumption at the final stage as the evaluation metric of DSE. The search space of parameters includes placement parameters and clock tree synthesis parameters.
+<Requirement>:
+Develop a script that runs logic synthesis for the 'quantum_computer_module' with a variety of clock periods. Utilize the 'tune' function to experiment with clock periods ranging from 1ns to 10ns, incrementing by 0.5ns each time. And we will take the 'tns', 'wns', and 'power' metrics at the final stage as DSE evaluation metric.
+<Requirement>:
+Prepare a floorplan for the 'fpga_core' design using the 'sky130' platform. The core utilization should be tested from 50% to 90% with a step of 5%. The core aspect ratio should be within 0.8 to 1.2 with a step of 0.1. Use the 'tune' function for this experiment and consider the performance metric for each configuration.
+<Requirement>:
+Execute placement for the 'advanced_gpu' design on the 'nangate45' platform with densities varying from 0.5 to 0.9. Use the 'tune' function and evaluate the 'tns' and 'wns' for each placement density.
+<Requirement>:
+My project named "AutoDriver" on the "ams035" platform focuses on developing an integrated circuit for autonomous vehicles. For this, I need to run a series of processes while maximizing the chip's performance. During the synthesis phase, I want to set the clock period from 3 to 8 with a step of 1. Subsequently, during the floorplanning process, I'd like to adjust the core utilization between 70% and 90% in increments of 5%. Moving on, I aim to modify the placement density from 0.7 to 0.9 in steps of 0.05. For the clock tree synthesis, I plan to resolve 50% to 80% of timing violations, increasing in steps of 10%. After executing global and detailed routing, I want to obtain 'final' metrics for performance analysis. Can we automate this process?
+<Requirement>:
+My team and I are currently developing an ASIC project titled 'DataProcessingUnit' for data mining applications. We are utilizing the 'nangate45' platform for the project. Our primary objective is to optimize our design for the best score of performance, area and power metrics. We plan to achieve this by varying the clock period from 3 to 8 during synthesis, adjusting the core utilization to range from 50% to 85% during floorplanning, and changing the placement cell densities from 0.55 to 0.9. Additionally, we plan to fix approximately 60% of timing violations during clock tree synthesis. Once the detail routing stage is completed, we intend to extract the 'area' and 'power' performance metrics for analysis. We are keen to understand whether this approach will yield the desired results and if it is feasible to obtain the required metrics at the completion of the detail routing stage.
+<Requirement>:
+My "ethernet_switch" design needs to meet tough power constraints in "asap7". Please provide scripts to tune floorplan and placement parameters to minimize power.
+<Requirement>:
+For my high-speed "serdes" design in "nangate45", I want to get the best ppa. Can you suggest how I can tune channel width, utilization and placement density?
+<Requirement>:
+My "h264_encoder" design needs to meet tough area constraints in "gf180". Please suggest how I can automatically optimize cts and floorplan parameters to minimize area.
