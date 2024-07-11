@@ -20,7 +20,7 @@ To facilitate better understanding of Python-EDA interface document, we provide 
 ## Citation
 ```bibtex
 @article{wu2024chateda,
-  title={Chateda: A large language model powered autonomous agent for eda},
+  title={ChatEDA: A Large Language Model Powered Autonomous Agent for EDA},
   author={Wu, Haoyuan and He, Zhuolun and Zhang, Xinyun and Yao, Xufeng and Zheng, Su and Zheng, Haisheng and Yu, Bei},
   journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
   year={2024},
