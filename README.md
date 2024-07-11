@@ -19,13 +19,12 @@ To facilitate better understanding of Python-EDA interface document, we provide 
 
 ## Citation
 ```bibtex
-@inproceedings{he2023chateda,
+@article{wu2024chateda,
   title={Chateda: A large language model powered autonomous agent for eda},
-  author={He, Zhuolun and Wu, Haoyuan and Zhang, Xinyun and Yao, Xufeng and Zheng, Su and Zheng, Haisheng and Yu, Bei},
-  booktitle={2023 ACM/IEEE 5th Workshop on Machine Learning for CAD (MLCAD)},
-  pages={1--6},
-  year={2023},
-  organization={IEEE}
+  author={Wu, Haoyuan and He, Zhuolun and Zhang, Xinyun and Yao, Xufeng and Zheng, Su and Zheng, Haisheng and Yu, Bei},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
